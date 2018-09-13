@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { Divider, Row } from 'antd';
 import configurationActions from '../../redux/configuration/actions';
 import DropdownList from '../../compositions/Dropdown';
+import TextFieldGroup from '../../compositions/Textfield';
+import Textarea from '../../compositions/Textarea';
 
 const { getList } = configurationActions;
 
@@ -22,7 +24,11 @@ class ConfigurationList extends Component {
    return (
      <Row>
        <Divider>Dropdowns</Divider>
-       <DropdownList data={data ? data.dropdown: {}} />
+       <DropdownList data={data ? data.dropdown : {}} />
+       <Divider>Textfields</Divider>
+       <TextFieldGroup data={data ? data.textfield : {}} />
+       <Divider>Textarea</Divider>
+       <Textarea data={data ? data.textarea : {}} />
      </Row>
    );
  }

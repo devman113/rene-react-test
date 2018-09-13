@@ -20,8 +20,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 var ingredients = {
   data: {
-    textField: {
-
+    textfield: {
+      defaultValue: 'The default value from the API',
+      size: 'large'
+    },
+    textarea: {
+      defaultValue: 'The default value from the API'
     },
     dropdown: {
       values: ['jack', 'bill', 'henry', 'conan', 'duke', 'wayne'],
