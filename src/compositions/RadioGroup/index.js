@@ -3,7 +3,7 @@ import { Row, Col, Radio } from 'antd';
 
 const RadioGroup = Radio.Group;
 
-class SingleDropdown extends Component {
+class RadioboxGroup extends Component {
   state = {
     value: null,
   }
@@ -17,7 +17,7 @@ class SingleDropdown extends Component {
 
   render() {
     const { data } = this.props || {};
-    console.log(data);
+
     return  <Row>
       <Col lg={10} xs={22} offset={1}>
         <RadioGroup onChange={this.onChange} value={this.state.value}>
@@ -32,4 +32,4 @@ class SingleDropdown extends Component {
   }
 }
 
-export default SingleDropdown;
+export default RadioboxGroup;

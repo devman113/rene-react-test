@@ -7,6 +7,7 @@ import DropdownList from '../../compositions/Dropdown';
 import TextFieldGroup from '../../compositions/Textfield';
 import Textarea from '../../compositions/Textarea';
 import RadioGroup from '../../compositions/RadioGroup';
+import CheckboxGroup from '../../compositions/CheckboxGroup';
 
 const { getList } = configurationActions;
 
@@ -32,6 +33,8 @@ class ConfigurationList extends Component {
        <Textarea data={data ? data.textarea : {}} />
        <Divider>Radiobox</Divider>
        <RadioGroup data={data ? data.radiobox : {}} />
+       <Divider>Checkbox</Divider>
+       <CheckboxGroup data={data ? data.checkbox : {}} />
 
      </Row>
    );

@@ -34,6 +34,13 @@ var ingredients = {
     radiobox: {
       values: ['1', '2', '3', '4', '5', '6'],
       labels: ['Info 1', 'Info 2', 'Info 3', 'Info 4', 'Info 5', 'Info 6']    
+    },
+    checkbox: {
+      options: [
+        { label: 'Apple', value: 'Apple' },
+        { label: 'Pear', value: 'Pear' },
+        { label: 'Orange', value: 'Orange' },
+      ]
     }
   }
 };

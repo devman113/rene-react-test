@@ -52,7 +52,6 @@ class EmailInputDemo extends Component {
     isValid: false
   }
   onChange = (value, isValid) => {
-    console.log(value, isValid);
     this.setState({ value, isValid });
   }
 
