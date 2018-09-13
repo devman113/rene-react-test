@@ -5,8 +5,7 @@ import ConfigurationList from './containers/ConfigurationList/ConfigurationList'
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={App} />
-    <Route exact path="/fields" component={ConfigurationList} />
+    <Route exact path="/" component={ConfigurationList} />
   </Switch>
 );
 
