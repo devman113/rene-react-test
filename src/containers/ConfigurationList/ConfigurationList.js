@@ -8,6 +8,7 @@ import TextFieldGroup from '../../compositions/Textfield';
 import Textarea from '../../compositions/Textarea';
 import RadioGroup from '../../compositions/RadioGroup';
 import CheckboxGroup from '../../compositions/CheckboxGroup';
+import FileUpload from '../../compositions/FileUpload';
 
 const { getList } = configurationActions;
 
@@ -35,7 +36,8 @@ class ConfigurationList extends Component {
        <RadioGroup data={data ? data.radiobox : {}} />
        <Divider>Checkbox</Divider>
        <CheckboxGroup data={data ? data.checkbox : {}} />
-
+       <Divider>File Upload</Divider>
+       <FileUpload />
      </Row>
    );
  }
