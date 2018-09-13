@@ -21,7 +21,7 @@ class SingleDropdown extends Component {
     console.log(data);
     return <Select
       showSearch
-      style={{ width: '100%', marginTop: 10, marginBottom: 10 }}
+      style={{ width: '100%' }}
       placeholder="Select a person"
       optionFilterProp="children"
       onChange={this.handleChange}
