@@ -22,6 +22,10 @@ var ingredients = {
   data: {
     textField: {
 
+    },
+    dropdown: {
+      values: ['jack', 'bill', 'henry', 'conan', 'duke', 'wayne'],
+      labels: ['Jack', 'Bill', 'Henry', 'Conan', 'Duke', 'Wayne']
     }
   }
 };

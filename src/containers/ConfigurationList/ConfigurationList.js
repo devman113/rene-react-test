@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Divider, Row } from 'antd';
 import configurationActions from '../../redux/configuration/actions';
+import DropdownList from '../../compositions/Dropdown';
 
 const { getList } = configurationActions;
 
@@ -15,9 +17,13 @@ class ConfigurationList extends Component {
    getList();
  }
  render() {
-   console.log('Configuration Data', this.props.configurationList);
+   const { data } = this.props.configurationList || {};
+
    return (
-     <div>ConfigurationList Page</div>
+     <Row>
+       <Divider>Dropdowns</Divider>
+       <DropdownList data={data ? data.dropdown: {}} />
+     </Row>
    );
  }
 }
