@@ -3,7 +3,7 @@ import { Select } from 'antd';
 
 const Option = Select.Option;
 
-class MultiDropdown extends React.Component {
+class MultiDropdown extends Component {
 
   handleChange(value) {
     console.log(`Selected: ${value}`);
