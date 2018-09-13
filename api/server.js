@@ -30,6 +30,10 @@ var ingredients = {
     dropdown: {
       values: ['jack', 'bill', 'henry', 'conan', 'duke', 'wayne'],
       labels: ['Jack', 'Bill', 'Henry', 'Conan', 'Duke', 'Wayne']
+    },
+    radiobox: {
+      values: ['1', '2', '3', '4', '5', '6'],
+      labels: ['Info 1', 'Info 2', 'Info 3', 'Info 4', 'Info 5', 'Info 6']    
     }
   }
 };
