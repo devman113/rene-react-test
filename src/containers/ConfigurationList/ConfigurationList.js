@@ -9,8 +9,10 @@ import Textarea from '../../compositions/Textarea';
 import RadioGroup from '../../compositions/RadioGroup';
 import CheckboxGroup from '../../compositions/CheckboxGroup';
 import FileUpload from '../../compositions/FileUpload';
+import SearchInput from '../../compositions/SearchInput';
+import DatasetList from '../../compositions/DatasetList';
 
-const { getList } = configurationActions;
+const { getList, getDataset } = configurationActions;
 
 class ConfigurationList extends Component {
  state = {
@@ -21,8 +23,15 @@ class ConfigurationList extends Component {
    const { getList } = this.props;
    getList();
  }
+
+ onSearch = value => {
+   const { getDataset } = this.props;
+   getDataset(value);
+ }
+
  render() {
    const { data } = this.props.configurationList || {};
+   const { dataSet } = this.props;
 
    return (
      <Row>
@@ -36,6 +45,9 @@ class ConfigurationList extends Component {
        <RadioGroup data={data ? data.radiobox : {}} />
        <Divider>Checkbox</Divider>
        <CheckboxGroup data={data ? data.checkbox : {}} />
+       <Divider>Search Input</Divider>
+       <SearchInput onSearch={this.onSearch} />
+       <DatasetList dataSet={dataSet} />
        <Divider>File Upload</Divider>
        <FileUpload />
      </Row>
@@ -45,11 +57,13 @@ class ConfigurationList extends Component {
 
 ConfigurationList.propTypes = {
   configurationList: PropTypes.object,
+  dataSet: PropTypes.array,
 };
 
 export default connect(
   state => ({
-    configurationList: state.Configuration.configurationList
+    configurationList: state.Configuration.configurationList,
+    dataSet: state.Configuration.dataSet
   }),
-  { getList }
+  { getList, getDataset }
 )(ConfigurationList);
