@@ -18,7 +18,6 @@ class FileUpload extends Component {
   }
 
   render() {
-    const { data } = this.props || {};
     const { isShown } = this.state;
     const props = {
       name: 'file',
