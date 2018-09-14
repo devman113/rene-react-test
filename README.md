@@ -21,6 +21,6 @@ For react app running, you should go to `/`.
 
 ```npm install```
 (If there is no node_modules.)
-```
-npm start
-```
+```npm start```
+
+PS: you should install `Allow-Control-Allow-Origin` chrome extention to avoid CORS error.
