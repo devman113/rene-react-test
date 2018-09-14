@@ -15,8 +15,8 @@ app.all('/*', function(req, res, next) {
   next();
 });
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+api.use(bodyParser.json());
+api.use(bodyParser.urlencoded({extended: false}));
 
 var ingredients = {
   data: {
@@ -45,10 +45,22 @@ var ingredients = {
   }
 };
 
+var dataset = {
+  data: [
+    'apple', 'banana', 'berry', 'coconut', 'grapes', 'lemons', 'mangoes', 'orange', 'pear', 'peach', 'strawberry', 'watermelon'
+  ]
+};
+
 
 api.get('/configuration', function(req, res) {
-  console.log('GET From SERVER');
+  console.log('API call From SERVER');
   res.send(ingredients);
+});
+
+api.post('/dataset', function(req, res) {
+  var search = req.body.search;
+  const result = dataset.data.filter(single => single.includes(search));
+  res.send(result);
 });
 
 app.listen(4000);
