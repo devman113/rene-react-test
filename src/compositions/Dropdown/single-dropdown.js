@@ -18,7 +18,7 @@ class SingleDropdown extends Component {
 
   render() {
     const { data } = this.props || {};
-    console.log(data);
+
     return <Select
       showSearch
       style={{ width: '100%' }}
